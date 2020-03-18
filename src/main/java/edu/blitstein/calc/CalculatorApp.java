@@ -30,7 +30,8 @@ public class CalculatorApp {
             else {
                 try {
                     double nextNumber = keyboard.nextDouble();
-                    double result = clerk.evaluate(nextOp, clerk.getResult(), nextNumber);
+                    clerk.evaluate(nextOp, nextNumber);
+                    double result = clerk.getResult();
                     System.out.println("result " + nextOp + " " + nextNumber + " = " + result);
                     System.out.println("updated result = " + result);
                     } catch (DivideByZeroException e) {

@@ -32,11 +32,11 @@ public class Calculator {
      * Returns n1 op n2, provided op is one of '+', '', '*',or '/'.
      * Any other value of op throws UnknownOpException.
      */
-    public double evaluate(char opChar, double n1, double n2)
+    public double evaluate(char opChar, double n1)
             throws DivideByZeroException, UnknownOpException {
         double answer;
         BinaryOperation op = BinaryOperationFactory.getOperator(opChar);
-        answer = op.apply(n1, n2);
+        answer = op.apply(this.result, n1);
         return answer;
     }
 }
